@@ -55,8 +55,15 @@ namespace GraLogiczna
         {
             foreach (PictureBox pictureBox in boxy)
             {
-                int r = rnd.Next(obrazki.Count);
-                pictureBox.Image = obrazki[r];
+                int r = rnd.Next(99);
+                if (r < 25) pictureBox.Image = obrazki[0];
+                if (r >= 25 && r < 50) pictureBox.Image = obrazki[1];
+                if (r >= 50 && r < 65) pictureBox.Image = obrazki[2];
+                if (r >= 65 && r < 77) pictureBox.Image = obrazki[3];
+                if (r >= 77 && r < 86) pictureBox.Image = obrazki[4];
+                if (r >= 86 && r < 91) pictureBox.Image = obrazki[5];
+                if (r >= 91 && r < 96) pictureBox.Image = obrazki[6];
+                if (r >= 96 && r < 100) pictureBox.Image = obrazki[7];
             }
         }
 
