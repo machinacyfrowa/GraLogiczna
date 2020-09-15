@@ -82,7 +82,7 @@
             this.stawkaPlus.TabIndex = 4;
             this.stawkaPlus.Text = "+";
             this.stawkaPlus.UseVisualStyleBackColor = true;
-            this.stawkaPlus.Click += new System.EventHandler(this.StawkaButtonClick);
+            this.stawkaPlus.Click += new System.EventHandler(this.StawkaPlusButtonClick);
             // 
             // stawkaMinus
             // 
@@ -92,6 +92,7 @@
             this.stawkaMinus.TabIndex = 5;
             this.stawkaMinus.Text = "-";
             this.stawkaMinus.UseVisualStyleBackColor = true;
+            this.stawkaMinus.Click += new System.EventHandler(this.StawkaMinusButtonClick);
             // 
             // button3
             // 

@@ -90,11 +90,19 @@ namespace GraLogiczna
 
         }
 
-        private void StawkaButtonClick(object sender, EventArgs e)
+        private void StawkaPlusButtonClick(object sender, EventArgs e)
         {
             int nowastawka = 0;
             Int32.TryParse(stawkaBox.Text, out nowastawka);
             nowastawka ++;
+            stawkaBox.Text = nowastawka.ToString();
+        }
+
+        private void StawkaMinusButtonClick(object sender, EventArgs e)
+        {
+            int nowastawka = 0;
+            Int32.TryParse(stawkaBox.Text, out nowastawka);
+            nowastawka--;
             stawkaBox.Text = nowastawka.ToString();
         }
     }
