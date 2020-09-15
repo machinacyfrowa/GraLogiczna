@@ -71,5 +71,23 @@ namespace GraLogiczna
         {
             Roll();
         }
+        private void Sprawdz()
+        {
+            int mnoznik = 0;
+            //sprawdzanie rzędów
+            for (int i = 0; i <= 2; i++)
+            {
+                PictureBox pb1 = tableLayoutPanel1.GetControlFromPosition(0, i) as PictureBox;
+                PictureBox pb2 = tableLayoutPanel1.GetControlFromPosition(1, i) as PictureBox;
+                PictureBox pb3 = tableLayoutPanel1.GetControlFromPosition(2, i) as PictureBox;
+                if (pb1.Image == pb2.Image && pb2.Image == pb3.Image)
+                {
+                    //caly rzad taki sam
+                    if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik++;
+                }
+            }
+            //policzony mnoznik
+
+        }
     }
 }

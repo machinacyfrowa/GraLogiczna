@@ -35,6 +35,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.saldoBox = new System.Windows.Forms.TextBox();
+            this.wygranaBox = new System.Windows.Forms.TextBox();
+            this.stawkaBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -56,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 517);
+            this.label1.Location = new System.Drawing.Point(21, 491);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 2;
@@ -65,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 517);
+            this.label2.Location = new System.Drawing.Point(176, 491);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 3;
@@ -102,17 +105,44 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 517);
+            this.label3.Location = new System.Drawing.Point(111, 491);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "WYGRana";
+            // 
+            // saldoBox
+            // 
+            this.saldoBox.Location = new System.Drawing.Point(12, 515);
+            this.saldoBox.Name = "saldoBox";
+            this.saldoBox.Size = new System.Drawing.Size(92, 20);
+            this.saldoBox.TabIndex = 8;
+            this.saldoBox.Text = "100";
+            // 
+            // wygranaBox
+            // 
+            this.wygranaBox.Location = new System.Drawing.Point(111, 515);
+            this.wygranaBox.Name = "wygranaBox";
+            this.wygranaBox.Size = new System.Drawing.Size(59, 20);
+            this.wygranaBox.TabIndex = 9;
+            this.wygranaBox.Text = "0";
+            // 
+            // stawkaBox
+            // 
+            this.stawkaBox.Location = new System.Drawing.Point(177, 515);
+            this.stawkaBox.Name = "stawkaBox";
+            this.stawkaBox.Size = new System.Drawing.Size(56, 20);
+            this.stawkaBox.TabIndex = 10;
+            this.stawkaBox.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 539);
+            this.Controls.Add(this.stawkaBox);
+            this.Controls.Add(this.wygranaBox);
+            this.Controls.Add(this.saldoBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -137,6 +167,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox saldoBox;
+        private System.Windows.Forms.TextBox wygranaBox;
+        private System.Windows.Forms.TextBox stawkaBox;
     }
 }
 
