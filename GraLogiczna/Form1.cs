@@ -13,7 +13,10 @@ namespace GraLogiczna
     public partial class Form1 : Form
     {
         private List<Image> obrazki;
-        
+        private List<PictureBox> boxy;
+        private Random rnd;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +25,8 @@ namespace GraLogiczna
 
         private void Form1_Load(object sender, EventArgs e) {
             obrazki = new List<Image>();
-            Random rnd = new Random();
+            boxy = new List<PictureBox>();
+            rnd = new Random();
             obrazki.Add(GraLogiczna.Properties.Resources.logo1);
             obrazki.Add(GraLogiczna.Properties.Resources.logo2);
             obrazki.Add(GraLogiczna.Properties.Resources.logo3);
@@ -35,9 +39,20 @@ namespace GraLogiczna
                         SizeMode = PictureBoxSizeMode.StretchImage
                     };
                     tableLayoutPanel1.Controls.Add(pb, x, y);
+                    boxy.Add(pb);
                 }
             }
             
+        }
+
+        private void Roll(object sender, EventArgs e)
+        {
+            foreach (PictureBox pictureBox in boxy)
+            {
+                int r = rnd.Next(obrazki.Count);
+                pictureBox.Image = obrazki[r];
+            }
+
         }
     }
 }
