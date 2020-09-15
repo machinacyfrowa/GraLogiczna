@@ -89,5 +89,13 @@ namespace GraLogiczna
             //policzony mnoznik
 
         }
+
+        private void StawkaButtonClick(object sender, EventArgs e)
+        {
+            int nowastawka = 0;
+            Int32.TryParse(stawkaBox.Text, out nowastawka);
+            nowastawka ++;
+            stawkaBox.Text = nowastawka.ToString();
+        }
     }
 }

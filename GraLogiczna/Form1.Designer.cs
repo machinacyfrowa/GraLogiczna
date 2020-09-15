@@ -31,8 +31,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.stawkaPlus = new System.Windows.Forms.Button();
+            this.stawkaMinus = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.saldoBox = new System.Windows.Forms.TextBox();
@@ -74,23 +74,24 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "STAWKA";
             // 
-            // button1
+            // stawkaPlus
             // 
-            this.button1.Location = new System.Drawing.Point(239, 512);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.stawkaPlus.Location = new System.Drawing.Point(239, 512);
+            this.stawkaPlus.Name = "stawkaPlus";
+            this.stawkaPlus.Size = new System.Drawing.Size(75, 23);
+            this.stawkaPlus.TabIndex = 4;
+            this.stawkaPlus.Text = "+";
+            this.stawkaPlus.UseVisualStyleBackColor = true;
+            this.stawkaPlus.Click += new System.EventHandler(this.StawkaButtonClick);
             // 
-            // button2
+            // stawkaMinus
             // 
-            this.button2.Location = new System.Drawing.Point(320, 512);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.stawkaMinus.Location = new System.Drawing.Point(320, 512);
+            this.stawkaMinus.Name = "stawkaMinus";
+            this.stawkaMinus.Size = new System.Drawing.Size(75, 23);
+            this.stawkaMinus.TabIndex = 5;
+            this.stawkaMinus.Text = "-";
+            this.stawkaMinus.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -145,8 +146,8 @@
             this.Controls.Add(this.saldoBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.stawkaMinus);
+            this.Controls.Add(this.stawkaPlus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -163,8 +164,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button stawkaPlus;
+        private System.Windows.Forms.Button stawkaMinus;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox saldoBox;
