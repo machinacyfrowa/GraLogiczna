@@ -65,6 +65,7 @@ namespace GraLogiczna
                 if (r >= 91 && r < 96) pictureBox.Image = obrazki[6];
                 if (r >= 96 && r < 100) pictureBox.Image = obrazki[7];
             }
+            Sprawdz();
         }
 
         private void RollButtonClick(object sender, EventArgs e)
@@ -83,11 +84,25 @@ namespace GraLogiczna
                 if (pb1.Image == pb2.Image && pb2.Image == pb3.Image)
                 {
                     //caly rzad taki sam
-                    if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik++;
+                    //dacia i ssangyong
+                    if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik += 1;
+                    if (pb1.Image == obrazki[2] ) mnoznik += 2;
+                    if (pb1.Image == obrazki[3] ) mnoznik += 3;
                 }
             }
             //policzony mnoznik
-
+            if (mnoznik > 0)
+            {
+                int wygrana = 0;
+                Int32.TryParse(stawkaBox.Text, out wygrana);
+                wygrana *= mnoznik;
+                wygranaBox.Text = wygrana.ToString();
+                int saldo = 0;
+                Int32.TryParse(saldoBox.Text, out saldo);
+                saldoBox.Text = (saldo + wygrana).ToString();
+            }
+            else wygranaBox.Text = "0";
+            
         }
 
         private void StawkaPlusButtonClick(object sender, EventArgs e)
@@ -103,6 +118,7 @@ namespace GraLogiczna
             int nowastawka = 0;
             Int32.TryParse(stawkaBox.Text, out nowastawka);
             nowastawka--;
+            if (nowastawka < 1) nowastawka = 1;
             stawkaBox.Text = nowastawka.ToString();
         }
     }
