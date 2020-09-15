@@ -117,6 +117,7 @@
             // 
             this.saldoBox.Location = new System.Drawing.Point(12, 515);
             this.saldoBox.Name = "saldoBox";
+            this.saldoBox.ReadOnly = true;
             this.saldoBox.Size = new System.Drawing.Size(92, 20);
             this.saldoBox.TabIndex = 8;
             this.saldoBox.Text = "100";
@@ -125,6 +126,7 @@
             // 
             this.wygranaBox.Location = new System.Drawing.Point(111, 515);
             this.wygranaBox.Name = "wygranaBox";
+            this.wygranaBox.ReadOnly = true;
             this.wygranaBox.Size = new System.Drawing.Size(59, 20);
             this.wygranaBox.TabIndex = 9;
             this.wygranaBox.Text = "0";
@@ -133,9 +135,10 @@
             // 
             this.stawkaBox.Location = new System.Drawing.Point(177, 515);
             this.stawkaBox.Name = "stawkaBox";
+            this.stawkaBox.ReadOnly = true;
             this.stawkaBox.Size = new System.Drawing.Size(56, 20);
             this.stawkaBox.TabIndex = 10;
-            this.stawkaBox.Text = "0";
+            this.stawkaBox.Text = "10";
             // 
             // Form1
             // 

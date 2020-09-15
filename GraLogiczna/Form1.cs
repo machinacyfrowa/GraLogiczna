@@ -53,6 +53,15 @@ namespace GraLogiczna
 
         private void Roll()
         {
+            int noweSaldo;
+            Int32.TryParse(saldoBox.Text, out noweSaldo);
+            noweSaldo -= Int32.Parse(stawkaBox.Text);
+            if(noweSaldo < 0)
+            {
+                MessageBox.Show("Jesteś biedny, wybijaj!", "Bieda", MessageBoxButtons.OK);
+                return;
+            }
+            saldoBox.Text = noweSaldo.ToString();
             foreach (PictureBox pictureBox in boxy)
             {
                 int r = rnd.Next(99);
@@ -88,6 +97,31 @@ namespace GraLogiczna
                     if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik += 1;
                     if (pb1.Image == obrazki[2] ) mnoznik += 2;
                     if (pb1.Image == obrazki[3] ) mnoznik += 3;
+                    if (pb1.Image == obrazki[4] ) mnoznik += 4;
+                    if (pb1.Image == obrazki[5] ) mnoznik += 5;
+                }
+                //skosy
+                pb1 = tableLayoutPanel1.GetControlFromPosition(0, 0) as PictureBox;
+                pb2 = tableLayoutPanel1.GetControlFromPosition(1, 1) as PictureBox;
+                pb3 = tableLayoutPanel1.GetControlFromPosition(2, 2) as PictureBox;
+                if (pb1.Image == pb2.Image && pb2.Image == pb3.Image)
+                {
+                    if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik += 1;
+                    if (pb1.Image == obrazki[2]) mnoznik += 2;
+                    if (pb1.Image == obrazki[3]) mnoznik += 3;
+                    if (pb1.Image == obrazki[4]) mnoznik += 4;
+                    if (pb1.Image == obrazki[5]) mnoznik += 5;
+                }
+                pb1 = tableLayoutPanel1.GetControlFromPosition(2, 0) as PictureBox;
+                pb2 = tableLayoutPanel1.GetControlFromPosition(1, 1) as PictureBox;
+                pb3 = tableLayoutPanel1.GetControlFromPosition(0, 2) as PictureBox;
+                if (pb1.Image == pb2.Image && pb2.Image == pb3.Image)
+                {
+                    if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik += 1;
+                    if (pb1.Image == obrazki[2]) mnoznik += 2;
+                    if (pb1.Image == obrazki[3]) mnoznik += 3;
+                    if (pb1.Image == obrazki[4]) mnoznik += 4;
+                    if (pb1.Image == obrazki[5]) mnoznik += 5;
                 }
             }
             //policzony mnoznik
