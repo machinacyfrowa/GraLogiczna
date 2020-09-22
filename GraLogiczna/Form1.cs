@@ -92,9 +92,9 @@ namespace GraLogiczna
                 if (pb1.Image == obrazki[4]) mnoznik = 4;
                 if (pb1.Image == obrazki[5]) mnoznik = 5;
             }
-            if(pb1.Image == obrazki[6] || pb2.Image == obrazki[6] || pb3.Image == obrazki[6]) // jest wild 
+            if(pb1.Image == obrazki[7] || pb2.Image == obrazki[7] || pb3.Image == obrazki[7]) // jest wild 
             {
-                if(pb1.Image == obrazki[6])
+                if(pb1.Image == obrazki[7])
                 {
                     if(pb2.Image == pb3.Image)
                     {
@@ -105,7 +105,7 @@ namespace GraLogiczna
                         if (pb2.Image == obrazki[5]) mnoznik = 5;
                     }
                 }
-                if (pb2.Image == obrazki[6])
+                if (pb2.Image == obrazki[7])
                 {
                     if (pb1.Image == pb3.Image)
                     {
@@ -116,7 +116,7 @@ namespace GraLogiczna
                         if (pb1.Image == obrazki[5]) mnoznik = 5;
                     }
                 }
-                if (pb3.Image == obrazki[6])
+                if (pb3.Image == obrazki[7])
                 {
                     if (pb2.Image == pb1.Image)
                     {
