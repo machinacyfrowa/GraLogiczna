@@ -81,6 +81,23 @@ namespace GraLogiczna
         {
             Roll();
         }
+        private int Mnoznik(PictureBox pb1, PictureBox pb2, PictureBox pb3)
+        {
+            int mnoznik;
+            if(pb1.Image == pb2.Image && pb2.Image == pb3.Image) //wszystkie takie same
+            {
+                if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik += 1;
+                if (pb1.Image == obrazki[2]) mnoznik += 2;
+                if (pb1.Image == obrazki[3]) mnoznik += 3;
+                if (pb1.Image == obrazki[4]) mnoznik += 4;
+                if (pb1.Image == obrazki[5]) mnoznik += 5;
+            }
+            if(pb1.Image == obrazki[6] || pb2.Image == obrazki[6] || pb3.Image == obrazki[6]) // jest wild 
+            {
+                
+            }
+            return mnoznik;
+        }
         private void Sprawdz()
         {
             int mnoznik = 0;
