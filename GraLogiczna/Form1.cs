@@ -133,46 +133,26 @@ namespace GraLogiczna
         private void Sprawdz()
         {
             int mnoznik = 0;
+            PictureBox pb1;
+            PictureBox pb2;
+            PictureBox pb3;
             //sprawdzanie rzędów
             for (int i = 0; i <= 2; i++)
             {
-                PictureBox pb1 = tableLayoutPanel1.GetControlFromPosition(0, i) as PictureBox;
-                PictureBox pb2 = tableLayoutPanel1.GetControlFromPosition(1, i) as PictureBox;
-                PictureBox pb3 = tableLayoutPanel1.GetControlFromPosition(2, i) as PictureBox;
-                if (pb1.Image == pb2.Image && pb2.Image == pb3.Image)
-                {
-                    //caly rzad taki sam
-                    //dacia i ssangyong
-                    if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik += 1;
-                    if (pb1.Image == obrazki[2] ) mnoznik += 2;
-                    if (pb1.Image == obrazki[3] ) mnoznik += 3;
-                    if (pb1.Image == obrazki[4] ) mnoznik += 4;
-                    if (pb1.Image == obrazki[5] ) mnoznik += 5;
-                }
-                //skosy
-                pb1 = tableLayoutPanel1.GetControlFromPosition(0, 0) as PictureBox;
-                pb2 = tableLayoutPanel1.GetControlFromPosition(1, 1) as PictureBox;
-                pb3 = tableLayoutPanel1.GetControlFromPosition(2, 2) as PictureBox;
-                if (pb1.Image == pb2.Image && pb2.Image == pb3.Image)
-                {
-                    if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik += 1;
-                    if (pb1.Image == obrazki[2]) mnoznik += 2;
-                    if (pb1.Image == obrazki[3]) mnoznik += 3;
-                    if (pb1.Image == obrazki[4]) mnoznik += 4;
-                    if (pb1.Image == obrazki[5]) mnoznik += 5;
-                }
-                pb1 = tableLayoutPanel1.GetControlFromPosition(2, 0) as PictureBox;
-                pb2 = tableLayoutPanel1.GetControlFromPosition(1, 1) as PictureBox;
-                pb3 = tableLayoutPanel1.GetControlFromPosition(0, 2) as PictureBox;
-                if (pb1.Image == pb2.Image && pb2.Image == pb3.Image)
-                {
-                    if (pb1.Image == obrazki[0] || pb1.Image == obrazki[1]) mnoznik += 1;
-                    if (pb1.Image == obrazki[2]) mnoznik += 2;
-                    if (pb1.Image == obrazki[3]) mnoznik += 3;
-                    if (pb1.Image == obrazki[4]) mnoznik += 4;
-                    if (pb1.Image == obrazki[5]) mnoznik += 5;
-                }
+                pb1 = tableLayoutPanel1.GetControlFromPosition(0, i) as PictureBox;
+                pb2 = tableLayoutPanel1.GetControlFromPosition(1, i) as PictureBox;
+                pb3 = tableLayoutPanel1.GetControlFromPosition(2, i) as PictureBox;
+                mnoznik += Mnoznik(pb1, pb2, pb3);
             }
+            //skosy
+            pb1 = tableLayoutPanel1.GetControlFromPosition(0, 0) as PictureBox;
+            pb2 = tableLayoutPanel1.GetControlFromPosition(1, 1) as PictureBox;
+            pb3 = tableLayoutPanel1.GetControlFromPosition(2, 2) as PictureBox;
+            mnoznik += Mnoznik(pb1, pb2, pb3);
+            pb1 = tableLayoutPanel1.GetControlFromPosition(2, 0) as PictureBox;
+            pb2 = tableLayoutPanel1.GetControlFromPosition(1, 1) as PictureBox;
+            pb3 = tableLayoutPanel1.GetControlFromPosition(0, 2) as PictureBox;
+            mnoznik += Mnoznik(pb1, pb2, pb3);
             //policzony mnoznik
             if (mnoznik > 0)
             {
