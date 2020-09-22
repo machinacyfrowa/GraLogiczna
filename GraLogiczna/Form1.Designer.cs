@@ -99,7 +99,7 @@
             this.button3.Location = new System.Drawing.Point(401, 512);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
+            this.button3.TabIndex = 0;
             this.button3.Text = "ROLL";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.RollButtonClick);
@@ -157,7 +157,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "+";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

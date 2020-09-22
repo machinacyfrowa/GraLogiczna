@@ -184,5 +184,6 @@ namespace GraLogiczna
             if (nowastawka < 1) nowastawka = 1;
             stawkaBox.Text = nowastawka.ToString();
         }
+
     }
 }
